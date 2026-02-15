@@ -11,7 +11,7 @@ npm run seed
     bash
 npm run dev
 
-
+### 2. Setup Frontend
    bash
 cd ../client
 npm install
