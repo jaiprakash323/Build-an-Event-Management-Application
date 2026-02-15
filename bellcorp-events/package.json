@@ -1,0 +1,14 @@
+{
+  "name": "bellcorp-events",
+  "version": "1.0.0",
+  "description": "Bellcorp Event Management Application - MERN Stack",
+  "scripts": {
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "seed": "cd server && npm run seed"
+  },
+  "keywords": ["mern", "events", "mongodb", "react", "express"],
+  "author": "Bellcorp Events",
+  "license": "MIT"
+}
