@@ -20,12 +20,12 @@ const EventCard = ({ event }) => {
           <img src={event.imageUrl} alt={event.name} loading="lazy" />
         ) : (
           <div className="event-card-placeholder">
-            <span>🎫</span>
+            <span></span>
           </div>
         )}
         {/* Status badges */}
         <div className="event-card-badges">
-          {event.isFeatured && <span className="badge-featured">⭐ Featured</span>}
+          {event.isFeatured && <span className="badge-featured"> Featured</span>}
           {isSoldOut && <span className="badge-soldout">Sold Out</span>}
           {isPast && !isSoldOut && <span className="badge-past">Past</span>}
           {isAlmostFull && !isSoldOut && <span className="badge-almost">Almost Full</span>}
@@ -46,15 +46,15 @@ const EventCard = ({ event }) => {
         {/* Meta info */}
         <div className="event-card-meta">
           <div className="event-meta-item">
-            <span className="meta-icon">📅</span>
+            <span className="meta-icon"></span>
             <span>{format(new Date(event.date), 'MMM dd, yyyy · h:mm a')}</span>
           </div>
           <div className="event-meta-item">
-            <span className="meta-icon">📍</span>
+            <span className="meta-icon"></span>
             <span>{event.location}</span>
           </div>
           <div className="event-meta-item">
-            <span className="meta-icon">👤</span>
+            <span className="meta-icon"></span>
             <span>{event.organizer}</span>
           </div>
         </div>

@@ -18,7 +18,7 @@ const EventListItem = ({ registration, onCancel, cancelling }) => {
         {event.imageUrl ? (
           <img src={event.imageUrl} alt={event.name} />
         ) : (
-          <div className="dash-event-placeholder">🎫</div>
+          <div className="dash-event-placeholder"></div>
         )}
       </div>
       <div className="dash-event-body">
@@ -34,9 +34,9 @@ const EventListItem = ({ registration, onCancel, cancelling }) => {
           <Link to={`/events/${event._id}`}>{event.name}</Link>
         </h4>
         <div className="dash-event-info">
-          <span>📅 {format(new Date(event.date), 'MMM dd, yyyy · h:mm a')}</span>
-          <span>📍 {event.location}</span>
-          <span>🏢 {event.organizer}</span>
+          <span> {format(new Date(event.date), 'MMM dd, yyyy · h:mm a')}</span>
+          <span> {event.location}</span>
+          <span> {event.organizer}</span>
         </div>
         <div className="dash-event-footer">
           <span className="reg-date">
@@ -108,33 +108,33 @@ const Dashboard = () => {
         <div className="dash-header">
           <div>
             <h1 className="section-title">
-              👋 Hello, {user?.name?.split(' ')[0]}!
+               Hello, {user?.name?.split(' ')[0]}!
             </h1>
             <p className="section-subtitle">Manage your event registrations</p>
           </div>
           <Link to="/events" className="btn btn-primary">
-            🎫 Browse More Events
+             Browse More Events
           </Link>
         </div>
 
         {/* Stats Cards */}
         <div className="dash-stats">
           <div className="dash-stat-card">
-            <div className="dash-stat-icon">📅</div>
+            <div className="dash-stat-icon"></div>
             <div className="dash-stat-body">
               <div className="dash-stat-num">{data.upcoming.length}</div>
               <div className="dash-stat-label">Upcoming Events</div>
             </div>
           </div>
           <div className="dash-stat-card">
-            <div className="dash-stat-icon">✅</div>
+            <div className="dash-stat-icon"></div>
             <div className="dash-stat-body">
               <div className="dash-stat-num">{data.past.length}</div>
               <div className="dash-stat-label">Past Events</div>
             </div>
           </div>
           <div className="dash-stat-card">
-            <div className="dash-stat-icon">🎟️</div>
+            <div className="dash-stat-icon"></div>
             <div className="dash-stat-body">
               <div className="dash-stat-num">{data.total}</div>
               <div className="dash-stat-label">Total Registrations</div>
@@ -151,7 +151,7 @@ const Dashboard = () => {
             className={`dash-tab ${tab === 'upcoming' ? 'active' : ''}`}
             onClick={() => setTab('upcoming')}
           >
-            📅 Upcoming
+             Upcoming
             {data.upcoming.length > 0 && (
               <span className="tab-count">{data.upcoming.length}</span>
             )}
@@ -160,7 +160,7 @@ const Dashboard = () => {
             className={`dash-tab ${tab === 'past' ? 'active' : ''}`}
             onClick={() => setTab('past')}
           >
-            ⏰ Past Events
+             Past Events
             {data.past.length > 0 && (
               <span className="tab-count">{data.past.length}</span>
             )}
@@ -176,7 +176,7 @@ const Dashboard = () => {
         ) : currentList.length === 0 ? (
           <div className="empty-state">
             <div className="empty-state-icon">
-              {tab === 'upcoming' ? '🎯' : '📋'}
+              {tab === 'upcoming' ? '' : ''}
             </div>
             <h3>
               {tab === 'upcoming' ? 'No upcoming events' : 'No past events'}

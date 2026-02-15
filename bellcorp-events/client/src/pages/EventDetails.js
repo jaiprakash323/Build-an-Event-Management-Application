@@ -55,7 +55,7 @@ const EventDetails = () => {
       await registrationsAPI.register(id);
       setIsRegistered(true);
       setEvent((prev) => ({ ...prev, availableSeats: prev.availableSeats - 1 }));
-      setActionMessage({ type: 'success', text: '🎉 Successfully registered! Check your dashboard.' });
+      setActionMessage({ type: 'success', text: ' Successfully registered! Check your dashboard.' });
     } catch (err) {
       setActionMessage({ type: 'error', text: err.response?.data?.message || 'Registration failed' });
     } finally {
@@ -114,13 +114,13 @@ const EventDetails = () => {
               <div className="event-details-header">
                 <span className={`badge ${getCategoryClass(event.category)}`}>{event.category}</span>
                 {isPast && <span className="badge badge-gray">Past Event</span>}
-                {event.price === 0 && <span className="badge badge-success">🎟️ Free</span>}
+                {event.price === 0 && <span className="badge badge-success"> Free</span>}
               </div>
               <h1 className="event-details-title">{event.name}</h1>
 
               <div className="event-details-meta">
                 <div className="det-meta-item">
-                  <span className="det-meta-icon">📅</span>
+                  <span className="det-meta-icon"></span>
                   <div>
                     <div className="det-meta-label">Date & Time</div>
                     <div className="det-meta-value">{format(new Date(event.date), 'EEEE, MMMM dd, yyyy · h:mm a')}</div>
@@ -130,14 +130,14 @@ const EventDetails = () => {
                   </div>
                 </div>
                 <div className="det-meta-item">
-                  <span className="det-meta-icon">📍</span>
+                  <span className="det-meta-icon"></span>
                   <div>
                     <div className="det-meta-label">Location</div>
                     <div className="det-meta-value">{event.location}</div>
                   </div>
                 </div>
                 <div className="det-meta-item">
-                  <span className="det-meta-icon">🏢</span>
+                  <span className="det-meta-icon"></span>
                   <div>
                     <div className="det-meta-label">Organizer</div>
                     <div className="det-meta-value">{event.organizer}</div>
@@ -212,12 +212,12 @@ const EventDetails = () => {
                 </button>
               ) : isPast ? (
                 <div className="reg-past-msg">
-                  <span>⏰</span> This event has already ended.
+                  <span></span> This event has already ended.
                 </div>
               ) : isRegistered ? (
                 <>
                   <div className="reg-confirmed-msg">
-                    ✅ You're registered for this event!
+                     You're registered for this event!
                   </div>
                   <button
                     className="btn btn-danger btn-lg w-full"
@@ -258,7 +258,7 @@ const EventDetails = () => {
                   alert('Link copied to clipboard!');
                 }}
               >
-                📤 Share Event
+                 Share Event
               </button>
             </div>
 

@@ -139,7 +139,7 @@ const Home = () => {
             </div>
           ) : (
             <div className="empty-state">
-              <div className="empty-state-icon">🎫</div>
+              <div className="empty-state-icon"></div>
               <h3>No featured events yet</h3>
               <p>Check back soon for exciting upcoming events!</p>
               <Link to="/events" className="btn btn-primary">Browse All Events</Link>
@@ -157,7 +157,7 @@ const Home = () => {
               <p>Join thousands of event-goers who discover and attend amazing events every week.</p>
               <div className="cta-btns">
                 <Link to="/events" className="btn btn-primary btn-lg">
-                  🎫 Browse Events
+                   Browse Events
                 </Link>
                 <Link to="/register" className="btn btn-outline btn-lg cta-secondary-btn">
                   Create Account →

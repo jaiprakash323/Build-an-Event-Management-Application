@@ -51,7 +51,7 @@ const Events = () => {
         {/* Page Header */}
         <div className="events-header">
           <div>
-            <h1 className="section-title">🎫 Browse Events</h1>
+            <h1 className="section-title"> Browse Events</h1>
             {pagination && (
               <p className="section-subtitle">
                 {pagination.totalEvents} events available
@@ -142,7 +142,7 @@ const Events = () => {
             )}
             {filters.category && (
               <span className="filter-tag">
-                📂 {filters.category}
+                 {filters.category}
                 <button onClick={() => updateFilter('category', '')}>✕</button>
               </span>
             )}
@@ -154,7 +154,7 @@ const Events = () => {
             )}
             {filters.dateFrom && (
               <span className="filter-tag">
-                📅 From {filters.dateFrom}
+                 From {filters.dateFrom}
                 <button onClick={() => updateFilter('dateFrom', '')}>✕</button>
               </span>
             )}

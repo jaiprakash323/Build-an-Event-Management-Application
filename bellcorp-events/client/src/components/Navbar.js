@@ -77,7 +77,7 @@ const Navbar = () => {
           </NavLink>
           {user && (
             <NavLink to="/dashboard" className="mobile-nav-link" onClick={closeMenu}>
-              📊 Dashboard
+               Dashboard
             </NavLink>
           )}
           <div className="mobile-divider" />
